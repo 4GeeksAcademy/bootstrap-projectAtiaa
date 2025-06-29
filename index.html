@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Post with Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f5f1;
+    }
+    .post {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .post-header, .post-footer {
+      padding: 12px 16px;
+    }
+    .post-image img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="post">
+      <!-- Header -->
+      <div class="post-header d-flex justify-content-between align-items-center border-bottom">
+        <div class="d-flex align-items-center">
+          <img src="https://via.placeholder.com/40" class="rounded-circle me-2" alt="Profile">
+          <strong>@yourusername</strong>
+        </div>
+        <button class="btn btn-sm btn-outline-primary">Create a new post</button>
+      </div>
+
+      <!-- Image -->
+      <div class="post-image">
+        <img src="https://placekitten.com/600/400" alt="Post">
+      </div>
+
+      <!-- Footer -->
+      <div class="post-footer border-top">
+        <p class="mb-1"><strong>Caption:</strong> This is a sample caption for your Instagram post.</p>
+        <button class="btn btn-success btn-sm">Publish</button>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newPostModalLabel">Create a New Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control mb-3" placeholder="Add the caption of your post here"></textarea>
+        <input type="file" class="form-control">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Publish</button>
+      </div>
+    </div>
+  </div>
+</div>
